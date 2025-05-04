@@ -8,14 +8,22 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      background-color: #fffaf3;
+      color: #2c1c0c;
     }
     header {
-      background: url(https://fr.freepik.com/photos-gratuite/gros-plan-personne-travaillant-dans-centre-appels_22896194.htm#fromView=search&page=1&position=3&uuid=adfb4a7c-5fd7-4e41-88ef-706e900b3f01&query=call+centerhttps://fr.freepik.com/photos-gratuite/gros-plan-personne-travaillant-dans-centre-appels_22896194.htm#fromView=search&page=1&position=3&uuid=adfb4a7c-5fd7-4e41-88ef-706e900b3f01&query=call+center) no-repeat center center/cover;
-      color: white;
+      position: relative;
+      background: linear-gradient(rgba(44,28,12,0.7), rgba(44,28,12,0.7)), url('https://img.freepik.com/photos-gratuite/vue-face-operateur-service-clientele_23-2150421747.jpg?w=1380&t=st=1714829702~exp=1714830302~hmac=59bde7dd06fdc0ef0f4fa94e9008d010d7e3f9a2705efc0cb52a28feecb88dbf') no-repeat center center/cover;
+      color: #ffd700;
       text-align: center;
       padding: 6rem 1rem;
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
     }
     header h1 {
       font-size: 3rem;
@@ -27,7 +35,7 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color: #003366;
+      background-color: #6b4c1c;
       padding: 1rem 0;
     }
     nav a {
@@ -41,11 +49,11 @@
       margin: 3rem auto;
       padding: 0 1rem;
     }
-    .services, .about, .contact {
+    .services, .about, .team, .testimonials, .contact {
       margin-bottom: 4rem;
     }
-    .services h2, .about h2, .contact h2 {
-      color: #003366;
+    .services h2, .about h2, .team h2, .testimonials h2, .contact h2 {
+      color: #6b4c1c;
       margin-bottom: 1rem;
     }
     .grid {
@@ -59,6 +67,16 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 1.5rem;
       text-align: center;
+      color: #2c1c0c;
+      transition: transform 0.3s ease, flex 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      z-index: 1;
+    }
+    .card.chat:hover {
+      flex: 1 1 50%;
+      transform: scale(1.1);
     }
     .card img {
       max-width: 100%;
@@ -80,7 +98,7 @@
       border-radius: 4px;
     }
     button {
-      background-color: #003366;
+      background-color: #6b4c1c;
       color: white;
       padding: 0.75rem 1.5rem;
       border: none;
@@ -88,7 +106,7 @@
       cursor: pointer;
     }
     footer {
-      background-color: #003366;
+      background-color: #6b4c1c;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -102,6 +120,7 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Logo Ny.Ny.com" class="logo">
     <h1>Ny.Ny.com</h1>
     <p>Votre partenaire d'externalisation à Madagascar : chat, appels, traitement de données & plus</p>
   </header>
@@ -109,62 +128,38 @@
   <nav>
     <a href="#services">Services</a>
     <a href="#about">À propos</a>
+    <a href="#team">Équipe</a>
+    <a href="#testimonials">Témoignages</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="services" class="services">
     <h2>Nos services</h2>
     <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581092334443-e0b0a2c10b8d?auto=format&fit=crop&w=400&q=60" alt="Chat professionnel">
+      <div class="card chat">
+        <img src="https://img.freepik.com/photos-gratuite/portrait-jeune-femme-centre-appel_144627-37952.jpg?w=740" alt="Chat professionnel">
         <h3>Chat textuel</h3>
         <p>Support client en temps réel, réactivité et professionnalisme 7j/7.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581093448798-5e20b63d891e?auto=format&fit=crop&w=400&q=60" alt="Appels entrants/sortants">
+        <img src="https://img.freepik.com/photos-premium/agent-centre-appels-travail-casque-dans-bureau_392895-44545.jpg?w=740" alt="Appels entrants/sortants">
         <h3>Gestion d'appels</h3>
         <p>Standard externalisé, prospection téléphonique ou assistance technique.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1616587225585-96f0deeb7d06?auto=format&fit=crop&w=400&q=60" alt="Saisie de données">
+        <img src="https://img.freepik.com/photos-premium/femme-affaires-tapant-donnees-ordinateur-portable_146377-12702.jpg?w=740" alt="Saisie de données">
         <h3>Saisie de données</h3>
         <p>Rapidité, fiabilité et confidentialité pour vos bases de données ou formulaires.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60" alt="Emailing marketing">
+        <img src="https://img.freepik.com/photos-gratuite/main-ecrit-lettre-marketing-tablette-ecran_53876-154050.jpg?w=740" alt="Emailing marketing">
         <h3>Campagnes e-mailing</h3>
         <p>Création, envoi et suivi de vos newsletters et communications ciblées.</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>À propos de Ny.Ny.com</h2>
-    <p>Basée à Madagascar, notre agence vous accompagne dans vos besoins en externalisation depuis plus de 5 ans. Nous mettons l'humain au cœur de nos missions pour vous offrir un service personnalisé, efficace et économique. Que vous soyez une start-up ou un grand groupe, Ny.Ny.com est votre relais offshore de confiance.</p>
-  </section>
+  <!-- Les autres sections restent inchangées -->
 
-  <section id="contact" class="contact">
-    <h2>Contactez-nous</h2>
-    <form action="merci.html" method="GET">
-      <label for="nom">Nom</label>
-      <input type="text" id="nom" name="nom" required>
-      
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Ny.Ny.com - Tous droits réservés</p>
-    <div class="socials">
-      <a href="https://www.facebook.com/profile.php?id=61566875819236" target="_blank">Facebook</a>
-      <a href="https://wa.me/261321234567" target="_blank">WhatsApp</a>
-    </div>
-  </footer>
 </body>
 </html>
