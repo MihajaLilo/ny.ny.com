@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ny.Ny.com - Accueil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .logo {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .contact {
+      background-color: #f4f4f4;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #003366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #002244;
+    }
+    .socials {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .socials a {
+      margin: 0 1rem;
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Ny.Ny.com" class="logo">
+    <h1>Bienvenue chez Ny.Ny.com</h1>
+    <p>Externalisation de services professionnels : chat textuel, appels, saisie de données & plus.</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Nos services</h2>
+    <ul>
+      <li>Chat textuel professionnel</li>
+      <li>Gestion d’appels entrants et sortants</li>
+      <li>Saisie et traitement de données</li>
+      <li>Campagnes e-mailing personnalisées</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <form action="merci.html" method="GET">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <div class="socials">
+    <p>Suivez-nous :</p>
+    <a href="https://www.facebook.com/profile.php?id=61566875819236" target="_blank">Facebook</a>
+    <a href="https://wa.me/261321234567" target="_blank">WhatsApp</a>
+  </div>
+</body>
+</html>
