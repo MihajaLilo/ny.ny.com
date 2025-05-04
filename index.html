@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ny.Ny.com - Accueil</title>
+  <title>Ny.Ny.com - Externalisation professionnelle</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
       color: #333;
     }
     header {
-      background-color: #003366;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8e9210239c?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
       color: white;
-      padding: 1rem;
       text-align: center;
+      padding: 6rem 1rem;
     }
-    .logo {
-      max-width: 100px;
-      display: block;
-      margin: 0 auto 1rem;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     nav {
-      text-align: center;
-      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      background-color: #003366;
+      padding: 1rem 0;
     }
     nav a {
-      margin: 0 1rem;
-      color: #003366;
+      color: white;
       text-decoration: none;
+      margin: 0 1rem;
       font-weight: bold;
     }
     section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
-    .contact {
-      background-color: #f4f4f4;
+    .services, .about, .contact {
+      margin-bottom: 4rem;
+    }
+    .services h2, .about h2, .contact h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .contact form {
+      background-color: #fff;
       padding: 2rem;
       border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     input, textarea {
       width: 100%;
@@ -58,41 +87,60 @@
       border-radius: 4px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #002244;
-    }
-    .socials {
+    footer {
+      background-color: #003366;
+      color: white;
       text-align: center;
-      margin-top: 2rem;
+      padding: 2rem 1rem;
     }
     .socials a {
-      margin: 0 1rem;
-      color: #003366;
+      color: white;
+      margin: 0 0.5rem;
       text-decoration: none;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Ny.Ny.com" class="logo">
-    <h1>Bienvenue chez Ny.Ny.com</h1>
-    <p>Externalisation de services professionnels : chat textuel, appels, saisie de données & plus.</p>
+    <h1>Ny.Ny.com</h1>
+    <p>Votre partenaire d'externalisation à Madagascar : chat, appels, traitement de données & plus</p>
   </header>
 
   <nav>
     <a href="#services">Services</a>
+    <a href="#about">À propos</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="services">
+  <section id="services" class="services">
     <h2>Nos services</h2>
-    <ul>
-      <li>Chat textuel professionnel</li>
-      <li>Gestion d’appels entrants et sortants</li>
-      <li>Saisie et traitement de données</li>
-      <li>Campagnes e-mailing personnalisées</li>
-    </ul>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581092334443-e0b0a2c10b8d?auto=format&fit=crop&w=400&q=60" alt="Chat professionnel">
+        <h3>Chat textuel</h3>
+        <p>Support client en temps réel, réactivité et professionnalisme 7j/7.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581093448798-5e20b63d891e?auto=format&fit=crop&w=400&q=60" alt="Appels entrants/sortants">
+        <h3>Gestion d'appels</h3>
+        <p>Standard externalisé, prospection téléphonique ou assistance technique.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1616587225585-96f0deeb7d06?auto=format&fit=crop&w=400&q=60" alt="Saisie de données">
+        <h3>Saisie de données</h3>
+        <p>Rapidité, fiabilité et confidentialité pour vos bases de données ou formulaires.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60" alt="Emailing marketing">
+        <h3>Campagnes e-mailing</h3>
+        <p>Création, envoi et suivi de vos newsletters et communications ciblées.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>À propos de Ny.Ny.com</h2>
+    <p>Basée à Madagascar, notre agence vous accompagne dans vos besoins en externalisation depuis plus de 5 ans. Nous mettons l'humain au cœur de nos missions pour vous offrir un service personnalisé, efficace et économique. Que vous soyez une start-up ou un grand groupe, Ny.Ny.com est votre relais offshore de confiance.</p>
   </section>
 
   <section id="contact" class="contact">
@@ -111,10 +159,12 @@
     </form>
   </section>
 
-  <div class="socials">
-    <p>Suivez-nous :</p>
-    <a href="https://www.facebook.com/profile.php?id=61566875819236" target="_blank">Facebook</a>
-    <a href="https://wa.me/261321234567" target="_blank">WhatsApp</a>
-  </div>
+  <footer>
+    <p>© 2025 Ny.Ny.com - Tous droits réservés</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61566875819236" target="_blank">Facebook</a>
+      <a href="https://wa.me/261321234567" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
 </body>
 </html>
